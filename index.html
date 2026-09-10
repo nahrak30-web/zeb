@@ -5,6 +5,8 @@
 
 <meta charset="UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>不可视界线</title>
 
 
@@ -12,31 +14,48 @@
 
 
 *{
-    box-sizing:border-box;
+box-sizing:border-box;
 }
+
+
+
+html,body{
+
+margin:0;
+
+padding:0;
+
+width:100%;
+
+min-height:100%;
+
+}
+
 
 
 body{
 
-    margin:0;
+min-height:100vh;
 
-    height:100vh;
+display:flex;
 
-    display:flex;
+justify-content:center;
 
-    justify-content:center;
+align-items:center;
 
-    align-items:center;
+background:#f2f0eb;
 
-    background:#f2f0eb;
+font-family:
 
-    font-family:
-    "Microsoft YaHei",
-    sans-serif;
+"Microsoft YaHei",
+sans-serif;
 
-    color:#444;
+color:#444;
+
+padding:10px;
 
 }
+
 
 
 
@@ -44,22 +63,33 @@ body{
 #game{
 
 
-    width:900px;
+width:900px;
 
-    height:680px;
+max-width:100%;
 
-    background:#ffffff;
 
-    border-radius:25px;
+height:680px;
 
-    box-shadow:
-    0 15px 45px rgba(0,0,0,.12);
+max-height:95vh;
 
-    overflow:hidden;
 
-    display:flex;
+background:white;
 
-    flex-direction:column;
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.12);
+
+
+overflow:hidden;
+
+
+display:flex;
+
+flex-direction:column;
 
 
 }
@@ -71,39 +101,54 @@ body{
 .header{
 
 
-    height:75px;
+height:75px;
 
-    background:#edf3f8;
 
-    display:flex;
+background:#edf3f8;
 
-    justify-content:center;
 
-    align-items:center;
+display:flex;
 
-    font-size:28px;
 
-    font-weight:bold;
+align-items:center;
 
-    color:#52697d;
+
+justify-content:center;
+
+
+font-size:28px;
+
+
+font-weight:bold;
+
+
+color:#52697d;
+
+
+flex-shrink:0;
 
 
 }
+
+
 
 
 
 .subtitle{
 
 
-    font-size:14px;
+font-size:14px;
 
-    margin-left:15px;
+margin-left:15px;
 
-    color:#999;
+color:#999;
 
-    font-weight:normal;
+font-weight:normal;
+
 
 }
+
+
 
 
 
@@ -111,19 +156,30 @@ body{
 .status{
 
 
-    height:55px;
+height:55px;
 
-    display:flex;
 
-    justify-content:center;
+display:flex;
 
-    align-items:center;
 
-    gap:50px;
+justify-content:center;
 
-    background:#fafafa;
 
-    border-bottom:1px solid #ddd;
+align-items:center;
+
+
+gap:50px;
+
+
+background:#fafafa;
+
+
+border-bottom:
+
+1px solid #ddd;
+
+
+flex-shrink:0;
 
 
 }
@@ -136,9 +192,15 @@ body{
 .dialogue{
 
 
-    flex:1;
+flex:1;
 
-    padding:25px 35px;
+
+padding:
+
+25px 35px;
+
+
+overflow:hidden;
 
 
 }
@@ -150,20 +212,29 @@ body{
 .name{
 
 
-    display:inline-block;
+display:inline-block;
 
-    background:#89a9c8;
 
-    color:white;
+background:#89a9c8;
 
-    padding:8px 25px;
 
-    border-radius:20px;
+color:white;
 
-    font-size:18px;
+
+padding:
+
+8px 25px;
+
+
+border-radius:20px;
+
+
+font-size:18px;
 
 
 }
+
+
 
 
 
@@ -172,21 +243,25 @@ body{
 .text{
 
 
-    margin-top:18px;
+margin-top:18px;
 
-    height:260px;
 
-    overflow-y:auto;
+height:260px;
 
-    font-size:18px;
 
-    line-height:1.8;
+overflow-y:auto;
 
-    letter-spacing:.5px;
+
+font-size:18px;
+
+
+line-height:1.8;
+
+
+letter-spacing:.5px;
 
 
 }
-
 
 
 
@@ -194,14 +269,22 @@ body{
 .choice{
 
 
-    height:170px;
+height:170px;
 
-    padding:10px 35px;
 
-    background:#fafafa;
+padding:
+
+10px 35px;
+
+
+background:#fafafa;
+
+
+flex-shrink:0;
 
 
 }
+
 
 
 
@@ -210,39 +293,51 @@ body{
 button{
 
 
-    width:100%;
+width:100%;
 
-    height:42px;
 
-    margin-bottom:10px;
+height:42px;
 
-    border-radius:15px;
 
-    border:
+margin-bottom:10px;
 
-    1px solid #ccd8e3;
 
-    background:#ffffff;
+border-radius:15px;
 
-    color:#52697d;
 
-    font-size:16px;
+border:
 
-    cursor:pointer;
+1px solid #ccd8e3;
 
-    transition:.2s;
+
+background:white;
+
+
+color:#52697d;
+
+
+font-size:16px;
+
+
+cursor:pointer;
+
+
+transition:.2s;
 
 
 }
 
 
 
+
+
 button:hover{
 
 
-    background:#eaf3fa;
+background:#eaf3fa;
 
-    transform:translateY(-2px);
+
+transform:translateY(-2px);
 
 
 }
@@ -254,16 +349,192 @@ button:hover{
 .footer{
 
 
-    height:25px;
+height:25px;
 
-    text-align:center;
 
-    color:#aaa;
+text-align:center;
 
-    font-size:12px;
+
+color:#aaa;
+
+
+font-size:12px;
+
+
+flex-shrink:0;
 
 
 }
+
+
+
+
+
+
+/* 手机适配 */
+
+@media(max-width:600px){
+
+
+
+body{
+
+padding:5px;
+
+align-items:center;
+
+}
+
+
+
+
+#game{
+
+
+width:100%;
+
+
+height:95vh;
+
+
+border-radius:18px;
+
+
+}
+
+
+
+
+.header{
+
+
+height:60px;
+
+
+font-size:22px;
+
+
+}
+
+
+
+.subtitle{
+
+display:none;
+
+}
+
+
+
+.status{
+
+
+height:45px;
+
+
+gap:8px;
+
+
+font-size:12px;
+
+
+}
+
+
+
+.dialogue{
+
+
+padding:
+
+18px;
+
+
+}
+
+
+
+
+
+.name{
+
+
+font-size:15px;
+
+
+padding:
+
+6px 18px;
+
+
+}
+
+
+
+
+.text{
+
+
+height:300px;
+
+
+font-size:16px;
+
+
+line-height:1.7;
+
+
+}
+
+
+
+
+
+.choice{
+
+
+height:auto;
+
+
+padding:
+
+10px 18px;
+
+
+}
+
+
+
+
+
+button{
+
+
+height:45px;
+
+
+font-size:15px;
+
+
+border-radius:12px;
+
+
+}
+
+
+
+.footer{
+
+
+font-size:11px;
+
+
+}
+
+
+
+}
+
 
 
 
@@ -271,14 +542,10 @@ button:hover{
 
 
 </head>
-
-
-
 <body>
 
 
 <div id="game">
-
 
 
 <div class="header">
@@ -288,7 +555,6 @@ button:hover{
 <span class="subtitle">
 第一章：转校生与幻界之眼
 </span>
-
 
 </div>
 
@@ -315,8 +581,8 @@ button:hover{
 </div>
 
 
-
 </div>
+
 
 
 
@@ -346,7 +612,6 @@ button:hover{
 
 
 
-
 <div class="footer">
 
 ✦ 每一次选择，都改变未来 ✦
@@ -355,8 +620,9 @@ button:hover{
 
 
 
-
 </div>
+
+
 
 
 
@@ -380,6 +646,8 @@ let scene="start";
 
 
 
+
+
 const story={
 
 
@@ -395,24 +663,31 @@ text:`
 春天。
 
 <br>
+
 樱花飘落。
 
 <br>
+
 你站在新的高中门口。
 
 <br>
+
 新的学校，新的班级，新的生活。
 
 <br>
+
 你深吸一口气。
 
 <br>
+
 “这一次，我一定要成为普通人。”
 
 <br>
-过去那个相信幻想，相信特殊力量的自己。
+
+过去那个相信幻想的自己。
 
 <br>
+
 已经结束了。
 
 `,
@@ -429,6 +704,7 @@ choices:[
 
 
 
+
 school:{
 
 
@@ -440,25 +716,28 @@ text:`
 一年A班。
 
 <br>
+
 老师介绍完新同学。
 
 <br>
-你走到讲台前。
+
+你走到讲台。
 
 <br>
+
 简单介绍自己。
 
 <br>
+
 台下响起普通的掌声。
 
 <br>
+
 很好。
 
 <br>
-没有人注意你。
 
-<br>
-没有人知道你的过去。
+没有人注意你。
 
 `,
 
@@ -475,6 +754,7 @@ choices:[
 
 
 
+
 seat:{
 
 
@@ -486,31 +766,32 @@ text:`
 你坐下。
 
 <br>
+
 原本以为今天会平静结束。
 
 <br>
+
 但是。
 
 <br>
+
 你的视线停住了。
 
 <br>
-窗边的位置。
+
+窗边。
 
 <br>
+
 一个少女正在看着天空。
 
 <br>
+
 她戴着黑色眼罩。
 
 <br>
+
 桌上放着一本奇怪的笔记。
-
-<br>
-手腕缠着绷带。
-
-<br>
-她像是在寻找某种不存在的东西。
 
 `,
 
@@ -529,7 +810,6 @@ choices:[
 
 
 
-
 observe:{
 
 
@@ -541,21 +821,27 @@ text:`
 少女低声说道：
 
 <br>
+
 “检测到异常波动。”
 
 <br>
+
 “不可视界线……”
 
 <br>
+
 “果然存在。”
 
 <br>
-你的心突然跳了一下。
+
+你的心跳停了一瞬。
 
 <br>
+
 因为这种话。
 
 <br>
+
 你曾经也说过。
 
 `,
@@ -572,7 +858,6 @@ choices:[
 
 
 
-
 ignore:{
 
 
@@ -584,15 +869,19 @@ text:`
 你移开视线。
 
 <br>
-告诉自己不要多管闲事。
+
+告诉自己不要接触奇怪的人。
 
 <br>
-但是。
+
+可是。
 
 <br>
+
 那个少女的声音。
 
 <br>
+
 一直留在你的脑海。
 
 `,
@@ -609,6 +898,7 @@ choices:[
 
 
 
+
 meet:{
 
 
@@ -620,15 +910,19 @@ text:`
 少女转过头。
 
 <br>
+
 “你……”
 
 <br>
+
 “刚才是不是听到了？”
 
 <br>
+
 她认真看着你。
 
 <br>
+
 “你也能感受到隐藏世界？”
 
 `,
@@ -647,6 +941,8 @@ choices:[
 
 
 
+
+
 ask:{
 
 
@@ -658,18 +954,23 @@ text:`
 “不可视界线。”
 
 <br>
+
 “现实与隐藏世界的交界。”
 
 <br>
+
 “只有特殊的人才能发现。”
 
 <br>
+
 她靠近一点。
 
 <br>
+
 “你的眼睛……”
 
 <br>
+
 “曾经觉醒过。”
 
 `,
@@ -688,6 +989,7 @@ choices:[
 
 
 
+
 memory:{
 
 
@@ -699,15 +1001,19 @@ text:`
 小时候。
 
 <br>
+
 你也相信世界隐藏着秘密。
 
 <br>
+
 你也幻想过自己拥有特殊力量。
 
 <br>
+
 但是后来。
 
 <br>
+
 你选择成为普通人。
 
 `,
@@ -731,6 +1037,7 @@ choices:[
 
 
 
+
 deny:{
 
 
@@ -742,12 +1049,15 @@ text:`
 “不。”
 
 <br>
+
 “你认错人了。”
 
 <br>
+
 程岚看着你。
 
 <br>
+
 她没有继续追问。
 
 `,
@@ -764,6 +1074,7 @@ choices:[
 
 
 
+
 normal:{
 
 
@@ -775,9 +1086,11 @@ text:`
 “普通人？”
 
 <br>
+
 程岚歪了歪头。
 
 <br>
+
 “可是你的气息不像。”
 
 `,
@@ -792,6 +1105,8 @@ choices:[
 },
 
 
+
+
 lunch:{
 
 
@@ -803,30 +1118,27 @@ text:`
 午休时间。
 
 <br>
+
 你来到天台。
 
 <br>
-这里比教室安静很多。
+
+原本只是想安静吃饭。
 
 <br>
-你本来只是想一个人吃饭。
+
+但是程岚已经在那里。
 
 <br>
-但是。
+
+她打开那本笔记。
 
 <br>
-那个少女已经在那里。
+
+第一页写着：
 
 <br>
-她坐在栏杆旁。
 
-<br>
-手里拿着那本奇怪的笔记。
-
-<br>
-封面写着：
-
-<br>
 《不可视界线调查记录》
 
 `,
@@ -834,473 +1146,11 @@ text:`
 
 choices:[
 
-["询问她","roof"],
-
-["偷偷观察","watch"]
+["询问她","end"]
 
 ]
 
 },
-
-
-
-
-
-watch:{
-
-
-name:"旁白",
-
-
-text:`
-
-你没有马上靠近。
-
-<br>
-只是远远观察。
-
-<br>
-你发现。
-
-<br>
-程岚并不是在装神秘。
-
-<br>
-她真的相信那个隐藏世界存在。
-
-<br>
-而且。
-
-<br>
-她似乎很期待有人能够理解她。
-
-`,
-
-
-choices:[
-
-["走过去","roof"]
-
-]
-
-},
-
-
-
-
-roof:{
-
-
-name:"程岚",
-
-
-text:`
-
-“你来了。”
-
-<br>
-程岚合上笔记。
-
-<br>
-“我已经确认。”
-
-<br>
-“你拥有观察隐藏世界的可能。”
-
-<br>
-她看着天空。
-
-<br>
-“这个世界上。”
-
-<br>
-一定存在普通人无法看见的东西。
-
-`,
-
-
-choices:[
-
-["你为什么相信它存在？","reason"],
-
-["你想找到什么？","goal"]
-
-]
-
-},
-
-
-
-
-reason:{
-
-
-name:"程岚",
-
-
-text:`
-
-程岚沉默了一会。
-
-<br>
-“因为……”
-
-<br>
-“我曾经失去过重要的东西。”
-
-<br>
-她低下头。
-
-<br>
-“如果那个世界真的存在。”
-
-<br>
-“也许那里会留下答案。”
-
-`,
-
-
-effect:function(){
-
-player.love+=5;
-
-},
-
-
-choices:[
-
-["继续听她说","club"]
-
-]
-
-},
-
-
-
-
-goal:{
-
-
-name:"程岚",
-
-
-text:`
-
-“不可视界线。”
-
-<br>
-“那是连接两个世界的地方。”
-
-<br>
-“我想找到它。”
-
-<br>
-“证明自己没有错。”
-
-`,
-
-
-effect:function(){
-
-player.chuni+=5;
-
-},
-
-
-choices:[
-
-["帮助她寻找","club"],
-
-["劝她放弃","reality"]
-
-]
-
-},
-
-
-
-
-
-reality:{
-
-
-name:"旁白",
-
-
-text:`
-
-你告诉她。
-
-<br>
-“也许那些只是幻想。”
-
-<br>
-程岚没有反驳。
-
-<br>
-只是安静地看着远方。
-
-<br>
-“如果是幻想。”
-
-<br>
-“为什么我会那么希望它是真的呢？”
-
-`,
-
-
-effect:function(){
-
-player.real+=5;
-
-},
-
-
-choices:[
-
-["陪她一会","club"]
-
-]
-
-},
-
-
-
-
-
-club:{
-
-
-name:"程岚",
-
-
-text:`
-
-下午放学。
-
-<br>
-程岚带你来到旧校舍。
-
-<br>
-这里几乎没有学生经过。
-
-<br>
-门牌已经有些老旧。
-
-<br>
-上面写着：
-
-<br><br>
-
-【幻界观测研究社】
-
-<br><br>
-
-“从今天开始。”
-
-<br>
-“这里就是我们的基地。”
-
-`,
-
-
-choices:[
-
-["加入这个社团","join"],
-
-["先看看","join"]
-
-]
-
-},
-
-
-
-
-join:{
-
-
-name:"旁白",
-
-
-text:`
-
-你环顾四周。
-
-<br>
-墙上贴满奇怪的符号。
-
-<br>
-桌上放着各种奇怪道具。
-
-<br>
-如果是以前的你。
-
-<br>
-或许会觉得这里很正常。
-
-<br>
-但是现在。
-
-<br>
-你只觉得有点怀念。
-
-`,
-
-
-effect:function(){
-
-player.love+=10;
-
-},
-
-
-choices:[
-
-["继续探索","next"]
-
-]
-
-},
-
-
-
-
-next:{
-
-
-name:"旁白",
-
-
-text:`
-
-就在这时。
-
-<br>
-社团门突然打开。
-
-<br>
-一个少年站在门口。
-
-<br>
-他看着房间里的布置。
-
-<br>
-露出了复杂的表情。
-
-<br><br>
-
-“你们……”
-
-<br>
-“又开始这种事情了吗？”
-
-`,
-
-
-choices:[
-
-["询问他是谁","boy"]
-
-]
-
-},
-
-
-
-
-
-boy:{
-
-
-name:"陈一鑫",
-
-
-text:`
-
-少年走进房间。
-
-<br>
-“我是陈一鑫。”
-
-<br>
-“这个学校的学生。”
-
-<br>
-他的视线落在程岚身上。
-
-<br>
-“你知道吗？”
-
-<br>
-“以前也有人相信这些东西。”
-
-<br><br>
-
-他看向你。
-
-<br>
-“而且。”
-
-<br>
-“那个家伙现在正在努力忘掉过去。”
-
-`,
-
-
-choices:[
-
-["什么意思？","past"],
-
-["保持沉默","past"]
-
-]
-
-},
-
-
-
-
-past:{
-
-
-name:"陈一鑫",
-
-
-text:`
-
-陈一鑫叹了一口气。
-
-<br>
-“看来你还没有告诉他。”
-
-<br>
-程岚看着你。
-
-<br>
-似乎想说什么。
-
-<br>
-但是最后没有开口。
-
-<br><br>
-
-放学后的校园。
-
-<br>
-第一次出现了新的谜团。
-
-`,
-
-
-choices:[
-
-["继续","end"]
-
-]
-
-},
-
 
 
 
@@ -1308,52 +1158,36 @@ choices:[
 end:{
 
 
-name:"旁白",
+name:"程岚",
 
 
 text:`
 
-【第一章 第一节】
+“你愿意相信我吗？”
+
+<br>
+
+阳光照在她身后。
+
+<br>
+
+你突然想起。
+
+<br>
+
+曾经那个相信奇迹的自己。
+
+<br>
+
+故事。
+
+<br>
+
+才刚刚开始。
 
 <br><br>
 
-《那个看见隐藏世界的少女》
-
-<br><br>
-
-完成。
-
-<br><br>
-
-当前状态：
-
-<br>
-💙 程岚信赖：
-`+
-player.love+
-`
-
-<br>
-🔥 幻界共鸣：
-`
-+player.chuni+
-`
-
-<br>
-🌱 现实值：
-`
-+player.real+
-`
-
-<br><br>
-
-下一节：
-
-<br>
-《幻界观测研究社》
-
-<br>
-即将开始。
+【第一章 第一节结束】
 
 `,
 
@@ -1370,37 +1204,33 @@ choices:[]
 
 
 
-// ===== 游戏运行 =====
 
 
-
-function typeWriter(element,html){
+function typeWriter(element,text){
 
 
 element.innerHTML="";
 
 
-let text=html;
-
-
-let index=0;
+let i=0;
 
 
 let timer=setInterval(()=>{
 
 
-element.innerHTML=text.substring(0,index);
+element.innerHTML=text.substring(0,i);
 
 
-index++;
+i++;
 
 
-if(index>=text.length){
+if(i>=text.length){
+
 
 clearInterval(timer);
 
-}
 
+}
 
 
 },15);
@@ -1411,10 +1241,15 @@ clearInterval(timer);
 
 
 
+
+
+
 function render(){
 
 
+
 let data=story[scene];
+
 
 
 if(data.effect){
@@ -1453,6 +1288,8 @@ data.text
 
 
 
+
+
 let box=document.getElementById("choice");
 
 
@@ -1467,6 +1304,7 @@ let btn=document.createElement("button");
 
 
 btn.innerText="✦ "+item[0];
+
 
 
 btn.onclick=function(){
@@ -1485,11 +1323,14 @@ render();
 box.appendChild(btn);
 
 
+
 });
 
 
 
 }
+
+
 
 
 
